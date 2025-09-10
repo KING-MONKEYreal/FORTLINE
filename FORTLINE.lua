@@ -1,5 +1,5 @@
 --[[ 
-    FORTLINE PRO — ULTIMATE+ 2025
+    FORTLINE 
     Kill, LoopKill, God, Speed, Jump, Teleport, Hitbox, ESP, Aimbot, Hotkeys
     All Bugs Fixed | Extra Features | Fully Optimized
     By Zero
@@ -17,7 +17,7 @@ local Camera = Workspace.CurrentCamera
 -- GUI
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
-    Name = "FORTLINE PRO — ULTIMATE+",
+    Name = "FORTLINE UPDATED",
     Icon = 0,
     LoadingTitle = "Rayfield Suite",
     LoadingSubtitle = "by Zero",
@@ -292,6 +292,7 @@ TabFun:CreateButton({Name="Fling All Players", Callback=function()
 end})
 
 Rayfield:LoadConfiguration()
+
 
 
 
