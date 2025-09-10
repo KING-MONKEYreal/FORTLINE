@@ -1,10 +1,3 @@
---[[ 
-    FORTLINE PRO — ULTIMATE 2025+ FIXED
-    Kill, LoopKill, God, Speed, Jump, Teleport, Hitbox, ESP, Aimbot, Fling
-    All Bugs Fixed | Fully Optimized | Extra Features
-    By Zero
-]]
-
 -- Services
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
@@ -18,9 +11,9 @@ local Debris = game:GetService("Debris")
 -- GUI
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
-    Name = "FORTLINE PRO — 2025+",
+    Name = "Fortline Updated",
     Icon = 0,
-    LoadingTitle = "Rayfield Suite",
+    LoadingTitle = "Loading cheat",
     LoadingSubtitle = "by Zero",
     Theme = "Default",
     ConfigurationSaving = {Enabled=true, FolderName=nil, FileName="FORTLINE_PRO_2025_PLUS"},
@@ -292,6 +285,7 @@ TabFun:CreateButton({Name="Fling All Players", Callback=function()
 end})
 
 Rayfield:LoadConfiguration()
+
 
 
 
