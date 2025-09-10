@@ -1,7 +1,7 @@
 --[[ 
-    FORTLINE 
-    Kill, LoopKill, God, Speed, Jump, Teleport, Hitbox, ESP, Aimbot, Hotkeys
-    All Bugs Fixed | Extra Features | Fully Optimized
+    FORTLINE PRO — ULTIMATE 2025+ FIXED
+    Kill, LoopKill, God, Speed, Jump, Teleport, Hitbox, ESP, Aimbot, Fling
+    All Bugs Fixed | Fully Optimized | Extra Features
     By Zero
 ]]
 
@@ -13,16 +13,17 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
 local Camera = Workspace.CurrentCamera
+local Debris = game:GetService("Debris")
 
 -- GUI
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
-    Name = "FORTLINE UPDATED",
+    Name = "FORTLINE PRO — 2025+",
     Icon = 0,
     LoadingTitle = "Rayfield Suite",
     LoadingSubtitle = "by Zero",
     Theme = "Default",
-    ConfigurationSaving = {Enabled=true, FolderName=nil, FileName="FORTLINE_PRO_ULTIMATE_PLUS"},
+    ConfigurationSaving = {Enabled=true, FolderName=nil, FileName="FORTLINE_PRO_2025_PLUS"},
 })
 
 local TabMain = Window:CreateTab("Main", 4483362458)
@@ -175,9 +176,7 @@ end)
 -- ESP
 -- =======================
 local PlayersESP = {}
-local ESPSettings = {
-    PlayerESP=true, ShowNames=true, ShowHealth=true, ShowDistance=true, TeamColor=false, Outline=true
-}
+local ESPSettings = {PlayerESP=true, ShowNames=true, ShowHealth=true, ShowDistance=true, TeamColor=false, Outline=true}
 
 TabESP:CreateToggle({Name="Enable Player ESP", CurrentValue=true, Callback=function(val)
     ESPSettings.PlayerESP = val
@@ -285,13 +284,15 @@ TabFun:CreateButton({Name="Fling All Players", Callback=function()
             local bodyVel = Instance.new("BodyVelocity")
             bodyVel.Velocity = Vector3.new(0,500,0)
             bodyVel.MaxForce = Vector3.new(1e6,1e6,1e6)
+            bodyVel.P = 1e6
             bodyVel.Parent = hrp
-            game:GetService("Debris"):AddItem(bodyVel,0.5)
+            Debris:AddItem(bodyVel,0.5)
         end
     end
 end})
 
 Rayfield:LoadConfiguration()
+
 
 
 
